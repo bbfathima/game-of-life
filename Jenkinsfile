@@ -1,6 +1,6 @@
-pipeline{
-    agent{label 'FATHIMA' }
-    stages{
+pipeline {
+    agent {label 'FATHIMA' }
+    stages {
         stage(clone) {
             steps{
                 git url: 'https://github.com/bbfathima/game-of-life.git',
@@ -8,7 +8,7 @@ pipeline{
             }
         }
         stage(build) {
-            steps{
+            steps {
                 sh './mvnw package'     
             }
         }
