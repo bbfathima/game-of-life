@@ -2,7 +2,7 @@ pipeline {
     agent {label 'FATHIMA' }
     stages {
         stage(clone) {
-            steps{
+            steps {
                 git url: 'https://github.com/bbfathima/game-of-life.git',
                     branch: 'declarative'
             }
