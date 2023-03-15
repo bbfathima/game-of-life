@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage(clone) {
             steps{
-                git url: 'https://github.com/bbfathima/game-of-life.git'
+                git url: 'https://github.com/bbfathima/game-of-life.git',
                     branch: 'declarative'
             }
         }
