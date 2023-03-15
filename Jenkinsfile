@@ -1,10 +1,15 @@
 pipeline{
-    agent{label 'FATHIMA' }
+    agent{label 'abc' }
     stages{
         stage(clone) {
             steps{
-                git url: 'https://github.com/bbfathima/game-of-life.git',
+                git url: 'https://github.com/bbfathima/game-of-life.git'
                     branch: 'declarative'
+            }
+        }
+        stage(build) {
+            steps{
+                sh './mvnw package'     
             }
         }
     }
